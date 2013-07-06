@@ -21,6 +21,12 @@ LOCAL_CFLAGS += -DQCOM_WCN_SSR
 
 endif
 
+ifeq ($(QCOM_BT_USE_SMD_TTY),true)
+
+LOCAL_CFLAGS += -DQCOM_WCN_SSR
+
+endif
+
 LOCAL_SRC_FILES += \
         src/hci_mct.c \
         src/userial_mct.c
